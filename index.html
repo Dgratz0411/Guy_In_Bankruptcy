@@ -3,116 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guy In Bankruptcy Coin</title>
+    <title>Trading Bot Release - $4M Market Cap</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #d4a017; /* Dark Yellow */
-            color: #fff;
             text-align: center;
+            background-color: #d4a017;
+            color: white;
             margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
-        .header {
-            padding: 20px;
-            font-size: 32px;
-            font-weight: bold;
-            text-transform: uppercase;
+            padding: 50px;
         }
         .container {
-            max-width: 900px;
-            padding: 20px;
-        }
-        .meme {
-            width: 100%;
-            max-width: 500px;
-            border-radius: 10px;
-            display: block;
-            margin: auto;
-            margin-top: 20px;
-        }
-        .roadmap {
-            margin-top: 50px;
-            text-align: center;
-            padding: 20px;
-            position: relative;
-        }
-        .milestone {
-            width: 180px;
-            height: 180px;
-            background-color: #ff6666;
-            color: #fff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            font-weight: bold;
-            margin: 30px auto;
-            position: relative;
-            border: 5px solid #fff;
-            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
-            overflow: hidden;
-        }
-        .milestone img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-        .roadmap-line {
-            width: 5px;
-            background: linear-gradient(180deg, #ff6666, #ffcc66, #66ccff);
-            height: 100px;
-            margin: auto;
-        }
-        .info-link {
-            display: block;
-            margin-top: 10px;
-            font-size: 14px;
-            text-decoration: underline;
-            cursor: pointer;
-            color: #ffcc66;
-        }
-        .falling-money {
-            position: absolute;
-            width: 50px;
-            animation: fall 5s linear infinite;
-        }
-        @keyframes fall {
-            0% { transform: translateY(-100vh); }
-            100% { transform: translateY(100vh); }
+            padding: 50px;
         }
     </style>
 </head>
 <body>
-    <div class="header">Guy In Bankruptcy Coin - The Coin of Hope</div>
     <div class="container">
-        <h1>Need Money? Everyone Buy Token, Let's Get Rich and Out of Financial Trouble!</h1>
-        <img src="bank.jpg" alt="Guy In Bankruptcy" class="meme">
-        <p>Help a desperate man out of bankruptcy! By investing in **Guy In Bankruptcy Coin**, you're not just supporting me, but creating a future where those in financial distress can seek real aid.</p>
-    </div>
-
-    <div class="roadmap">
-        <h2>Roadmap</h2>
-        <div class="milestone"><img src="airdrop.png" alt="Airdrop"></div>
-        <div class="roadmap-line"></div>
-        <div class="milestone"><img src="tradebot.png" alt="Trading_Bot"></div>
-        <span class="info-link" onclick="window.location='tradebot.html'">Click here for more information</span>
-        <div class="roadmap-line"></div>
-        <div class="milestone"><img src="virtual_agent.png" alt="LLM Virtual_Agent"></div>
-        <div class="roadmap-line"></div>
-        <div class="milestone">GET RICH!</div>
-    </div>
-    
-    <div class="container">
-        <h2>99% Profitability Trading Bot</h2>
-        <p>Sign up now to receive the trading bot when we reach $5 million market cap.</p>
+        <h1>Milestone #2 - $4M Market Cap</h1>
+        <p>Free 99% Profitability Trading Bot!</p>
+        <img src="trading_bot.png" width="300px">
+        <p>Sign up to receive the bot:</p>
         <form action="mailto:t.pricepowellaw@gmail.com" method="post" enctype="text/plain">
             <label for="wallet">Wallet Address:</label>
             <input type="text" id="wallet" name="wallet" required><br>
@@ -120,26 +31,6 @@
             <input type="email" id="email" name="email" required><br>
             <input type="submit" value="Submit">
         </form>
-        <h3>Trading Bot Performance</h3>
-        <img src="bot_performance.png" alt="Bot_Performance" width="300px">
-        <img src="trade_analysis.png" alt="Trade_Analysis" width="300px">
-        <img src="bot_profitability_percentage.png" alt="Profitability_Percentage" width="300px">
-        <img src="list_of_trades.png" alt="List of Trades" width="300px">
     </div>
-
-    <script>
-        function createFallingMoney() {
-            for (let i = 0; i < 10; i++) {
-                let money = document.createElement("img");
-                money.src = "money_falling.png";
-                money.classList.add("falling-money");
-                money.style.left = Math.random() * window.innerWidth + "px";
-                money.style.animationDuration = (Math.random() * 3 + 3) + "s";
-                document.body.appendChild(money);
-            }
-        }
-        createFallingMoney();
-        setInterval(createFallingMoney, 3000);
-    </script>
 </body>
 </html>
