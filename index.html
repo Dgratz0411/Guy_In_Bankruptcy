@@ -79,9 +79,10 @@
             cursor: pointer;
             color: #ffcc66;
         }
-        .falling-money {
+        .falling-dollar {
             position: absolute;
-            width: 50px;
+            font-size: 40px;
+            color: #00ff00;
             top: -10%;
             animation: fall 5s linear infinite;
         }
@@ -124,18 +125,18 @@
     </div>
 
     <script>
-        function createFallingMoney() {
+        function createFallingDollars() {
             for (let i = 0; i < 10; i++) {
-                let money = document.createElement("img");
-                money.src = "money_falling.png";
-                money.classList.add("falling-money");
-                money.style.left = Math.random() * window.innerWidth + "px";
-                money.style.animationDuration = (Math.random() * 3 + 3) + "s";
-                document.body.appendChild(money);
+                let dollar = document.createElement("div");
+                dollar.innerHTML = "&#36;"; // Dollar sign
+                dollar.classList.add("falling-dollar");
+                dollar.style.left = Math.random() * window.innerWidth + "px";
+                dollar.style.animationDuration = (Math.random() * 3 + 3) + "s";
+                document.body.appendChild(dollar);
             }
         }
-        createFallingMoney();
-        setInterval(createFallingMoney, 3000);
+        createFallingDollars();
+        setInterval(createFallingDollars, 3000);
     </script>
 </body>
 </html>
