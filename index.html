@@ -32,22 +32,6 @@
             margin: auto;
             margin-top: 20px;
         }
-        .cta {
-            background-color: #ff4444;
-            padding: 15px;
-            font-size: 22px;
-            font-weight: bold;
-            color: white;
-            text-decoration: none;
-            border-radius: 10px;
-            display: inline-block;
-            margin-top: 20px;
-            animation: bounce 1.5s infinite;
-        }
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
         .roadmap {
             margin-top: 50px;
             text-align: center;
@@ -55,29 +39,40 @@
             position: relative;
         }
         .milestone {
-            width: 150px;
-            height: 150px;
-            background-color: #333;
+            width: 180px;
+            height: 180px;
+            background-color: #ff6666;
             color: #fff;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: bold;
-            margin: 20px auto;
+            margin: 30px auto;
             position: relative;
+            border: 5px solid #fff;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
         }
         .milestone img {
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
+            margin-top: 10px;
         }
         .roadmap-line {
             width: 5px;
-            background-color: #fff;
+            background: linear-gradient(180deg, #ff6666, #ffcc66, #66ccff);
             height: 100px;
             margin: auto;
+        }
+        .info-link {
+            display: block;
+            margin-top: 10px;
+            font-size: 14px;
+            text-decoration: underline;
+            cursor: pointer;
+            color: #ffcc66;
         }
     </style>
 </head>
@@ -91,9 +86,11 @@
 
     <div class="roadmap">
         <h2>Roadmap</h2>
-        <div class="milestone">Milestone #1<br>$2M Market Cap<br><img src="money_falling.png" alt="Money Falling"></div>
+        <div class="milestone">Milestone #1<br>$2M Market Cap<br><img src="airdrop.png" alt="Airdrop"></div>
         <div class="roadmap-line"></div>
-        <div class="milestone">Milestone #2<br>$4M Market Cap<br><img src="trading_bot.png" alt="Trading Bot"></div>
+        <div class="milestone">Milestone #2<br>$4M Market Cap<br><img src="tradebot.png" alt="Trading Bot"><br>
+            <span class="info-link" onclick="window.location='tradebot.html'">Click here for more information</span>
+        </div>
         <div class="roadmap-line"></div>
         <div class="milestone">Milestone #3<br>$5M Market Cap<br><img src="virtual_agent.png" alt="LLM Virtual Agent"></div>
         <div class="roadmap-line"></div>
@@ -102,7 +99,6 @@
     
     <div class="container">
         <h2>99% Profitability Trading Bot</h2>
-        <img src="Screenshot 2025-03-02 110002.png" alt="Trading Bot Strategy" class="chart">
         <p>Sign up now to receive the trading bot when we reach $5 million market cap.</p>
         <form action="mailto:t.pricepowellaw@gmail.com" method="post" enctype="text/plain">
             <label for="wallet">Wallet Address:</label>
@@ -111,6 +107,11 @@
             <input type="email" id="email" name="email" required><br>
             <input type="submit" value="Submit">
         </form>
+        <h3>Trading Bot Performance</h3>
+        <img src="bot_performance.png" alt="Bot Performance" width="300px">
+        <img src="trade_analysis.png" alt="Trade Analysis" width="300px">
+        <img src="bot_profitability_percentage.png" alt="Profitability Percentage" width="300px">
+        <img src="list_of_trades.png" alt="List of Trades" width="300px">
     </div>
 </body>
 </html>
