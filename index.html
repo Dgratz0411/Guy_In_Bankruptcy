@@ -12,6 +12,9 @@
             text-align: center;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .header {
             padding: 20px;
@@ -21,7 +24,6 @@
         }
         .container {
             max-width: 900px;
-            margin: auto;
             padding: 20px;
         }
         .meme {
@@ -45,6 +47,7 @@
             color: #fff;
             border-radius: 50%;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             font-size: 14px;
@@ -74,6 +77,17 @@
             cursor: pointer;
             color: #ffcc66;
         }
+        .side-columns {
+            position: absolute;
+            top: 0;
+            width: 100px;
+        }
+        .left-column {
+            left: 0;
+        }
+        .right-column {
+            right: 0;
+        }
     </style>
 </head>
 <body>
@@ -88,9 +102,8 @@
         <h2>Roadmap</h2>
         <div class="milestone">Milestone #1<br>$2M Market Cap<br><img src="airdrop.png" alt="Airdrop"></div>
         <div class="roadmap-line"></div>
-        <div class="milestone">Milestone #2<br>$4M Market Cap<br><img src="tradebot.png" alt="Trading Bot"><br>
-            <span class="info-link" onclick="window.location='tradebot.html'">Click here for more information</span>
-        </div>
+        <div class="milestone">Milestone #2<br>$4M Market Cap<br><img src="tradebot.png" alt="Trading Bot"></div>
+        <span class="info-link" onclick="window.location='tradebot.html'">Click here for more information</span>
         <div class="roadmap-line"></div>
         <div class="milestone">Milestone #3<br>$5M Market Cap<br><img src="virtual_agent.png" alt="LLM Virtual Agent"></div>
         <div class="roadmap-line"></div>
@@ -112,6 +125,13 @@
         <img src="trade_analysis.png" alt="Trade Analysis" width="300px">
         <img src="bot_profitability_percentage.png" alt="Profitability Percentage" width="300px">
         <img src="list_of_trades.png" alt="List of Trades" width="300px">
+    </div>
+
+    <div class="side-columns left-column">
+        <img src="money_falling.png" alt="Money Falling" width="100px">
+    </div>
+    <div class="side-columns right-column">
+        <img src="money_falling.png" alt="Money Falling" width="100px">
     </div>
 </body>
 </html>
