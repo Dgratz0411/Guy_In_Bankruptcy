@@ -15,6 +15,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            position: relative;
+            overflow: hidden;
         }
         .header {
             padding: 20px;
@@ -47,7 +49,6 @@
             color: #fff;
             border-radius: 50%;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
             font-size: 14px;
@@ -56,12 +57,12 @@
             position: relative;
             border: 5px solid #fff;
             box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+            overflow: hidden;
         }
         .milestone img {
-            width: 80px;
-            height: 80px;
+            width: 100%;
+            height: 100%;
             border-radius: 50%;
-            margin-top: 10px;
         }
         .roadmap-line {
             width: 5px;
@@ -77,16 +78,14 @@
             cursor: pointer;
             color: #ffcc66;
         }
-        .side-columns {
+        .falling-money {
             position: absolute;
-            top: 0;
-            width: 100px;
+            width: 50px;
+            animation: fall 5s linear infinite;
         }
-        .left-column {
-            left: 0;
-        }
-        .right-column {
-            right: 0;
+        @keyframes fall {
+            0% { transform: translateY(-100vh); }
+            100% { transform: translateY(100vh); }
         }
     </style>
 </head>
@@ -100,14 +99,14 @@
 
     <div class="roadmap">
         <h2>Roadmap</h2>
-        <div class="milestone">Milestone #1<br>$2M Market Cap<br><img src="airdrop.png" alt="Airdrop"></div>
+        <div class="milestone"><img src="airdrop.png" alt="Airdrop"></div>
         <div class="roadmap-line"></div>
-        <div class="milestone">Milestone #2<br>$4M Market Cap<br><img src="tradebot.png" alt="Trading Bot"></div>
+        <div class="milestone"><img src="tradebot.png" alt="Trading Bot"></div>
         <span class="info-link" onclick="window.location='tradebot.html'">Click here for more information</span>
         <div class="roadmap-line"></div>
-        <div class="milestone">Milestone #3<br>$5M Market Cap<br><img src="virtual_agent.png" alt="LLM Virtual Agent"></div>
+        <div class="milestone"><img src="virtual_agent.png" alt="LLM Virtual Agent"></div>
         <div class="roadmap-line"></div>
-        <div class="milestone">Milestone #4<br>GET RICH!</div>
+        <div class="milestone">GET RICH!</div>
     </div>
     
     <div class="container">
@@ -127,11 +126,19 @@
         <img src="list_of_trades.png" alt="List of Trades" width="300px">
     </div>
 
-    <div class="side-columns left-column">
-        <img src="money_falling.png" alt="Money Falling" width="100px">
-    </div>
-    <div class="side-columns right-column">
-        <img src="money_falling.png" alt="Money Falling" width="100px">
-    </div>
+    <script>
+        function createFallingMoney() {
+            for (let i = 0; i < 10; i++) {
+                let money = document.createElement("img");
+                money.src = "money_falling.png";
+                money.classList.add("falling-money");
+                money.style.left = Math.random() * window.innerWidth + "px";
+                money.style.animationDuration = (Math.random() * 3 + 3) + "s";
+                document.body.appendChild(money);
+            }
+        }
+        createFallingMoney();
+        setInterval(createFallingMoney, 3000);
+    </script>
 </body>
 </html>
