@@ -81,7 +81,7 @@
         }
         .falling-dollar {
             position: absolute;
-            font-size: 40px;
+            font-size: 50px;
             color: #00ff00;
             top: -10%;
             animation: fall 5s linear infinite;
@@ -89,6 +89,21 @@
         @keyframes fall {
             0% { transform: translateY(-10vh); }
             100% { transform: translateY(100vh); }
+        }
+        .tradebot-page {
+            background-image: url('tradeprofitabilitypercent.png');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .tradebot-images img {
+            width: 100%;
+            max-width: 900px;
+            margin: 10px 0;
         }
     </style>
 </head>
@@ -107,7 +122,7 @@
         <div class="milestone"><img src="tradebot.png" alt="Trading Bot"></div>
         <span class="info-link" onclick="window.location='tradebot.html'">Click here for more information</span>
         <div class="roadmap-line"></div>
-        <div class="milestone"><img src="virtual_agent.png" alt="LLM Virtual Agent"></div>
+        <div class="milestone"><img src="virtualagent.png" alt="LLM Virtual Agent"></div>
         <div class="roadmap-line"></div>
         <div class="milestone">GET RICH!</div>
     </div>
